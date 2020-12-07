@@ -1,0 +1,14 @@
+.product-card {
+  max-width: 170px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 4px 7px 11px 0px #b8b3b3;
+  h1{
+    color: #9c2121;
+    text-align: right;
+  }
+  p{
+    text-align: left;
+  }
+}

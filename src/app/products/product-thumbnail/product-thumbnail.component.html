@@ -1,0 +1,30 @@
+<mat-progress-bar *ngIf="isLoading | async"
+                  mode="indeterminate"
+                  color="warn"
+                  style="position: absolute; top: 0; z-index: 5000;">
+</mat-progress-bar>
+<div *ngIf="products">
+  <mat-card class="product-card"
+            *ngFor="let product of products;let i=index; trackBy:trackById">
+    <mat-card-header>
+      <img mat-card-avatar src="{{product.imageUrl}}">
+      <mat-card-title>{{product.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{product.imageUrl}}" alt="Product">
+    <mat-card-content>
+      <!--      <button mat-icon-button color="primary">-->
+      <!--        <mat-icon>list_alt</mat-icon>-->
+      <!--      </button>-->
+      <h1>${{product.price}}</h1>
+
+      <p>{{product.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary">
+        Add To Cart
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+
+    </mat-card-actions>
+  </mat-card>
+</div>
