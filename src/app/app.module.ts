@@ -20,6 +20,7 @@ import {LoginSessionStorageService, LoginStorageService} from "./shared/services
 import {ProductService} from "./shared/api-services/product.service";
 import {MaterialModule} from "./material.module";
 import {AuthGuard} from "./shared/guards/auth.guard";
+import { ProductBaseComponent } from './products/product-base/product-base.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {AuthGuard} from "./shared/guards/auth.guard";
     ProductToolbarComponent,
     ProductThumbnailComponent,
     ProductListComponent,
+    ProductBaseComponent,
   ],
   imports: [
     BrowserModule,
